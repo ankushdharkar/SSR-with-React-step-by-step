@@ -1,0 +1,10 @@
+.App {
+  font-size: 16px;
+  color: #282c34;
+  width: 500px;
+  min-height: 400px;
+  margin: 100px auto 0;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 25px;
+}
