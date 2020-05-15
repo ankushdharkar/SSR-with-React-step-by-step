@@ -30,6 +30,6 @@ export default () => {
   return new Promise( (resolve, reject) => {
     setTimeout( () => {
       resolve(allConcerts);
-    }, 3000);
+    }, 5000);
   })
 }

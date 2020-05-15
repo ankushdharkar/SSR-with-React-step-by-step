@@ -35,4 +35,12 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { fetchAllConcerts })(AllConcertsList);
+function loadData (store) {
+  return store.dispatch(fetchAllConcerts());
+}
+
+const exportComponent = connect(mapStateToProps, { fetchAllConcerts })(AllConcertsList);
+export default {
+  component: exportComponent,
+  loadData
+}
