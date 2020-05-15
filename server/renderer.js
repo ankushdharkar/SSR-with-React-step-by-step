@@ -1,9 +1,22 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import AppComponent from './../src/App';
+import { StaticRouter } from 'react-router-dom';
+import Routes from "./../src/routes";
+
+
+function getContent(path) {
+  const routeContent = (
+    <StaticRouter location={path} context={{}}>
+      <Routes />
+    </StaticRouter>
+  )
+  const content = renderToString(routeContent);
+  return content;
+}
+
 
 function generatedHTML() {
-  const content = renderToString(<AppComponent />);
+  const content = getContent();
   return `
     <html>
       <head></head>
