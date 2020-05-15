@@ -4,7 +4,12 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      App.js is awesome
+      Concert Buddy is an app to help you find concerts
+
+      <button onClick={() => console.log('Start finding events')}>
+        Find Events
+      </button>
+
     </div>
   );
 }
