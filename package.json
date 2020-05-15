@@ -16,7 +16,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev:build:server": "webpack --config config/webpack.server.js"
+    "dev:build:server": "webpack --config config/webpack.server.js",
+    "dev:build:server:watch": "webpack --config config/webpack.server.js --watch",
+    "dev:server": "nodemon --watch build --exec \"node build/s-bundle.js\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,6 +41,7 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
     "babel-preset-react": "^6.24.1",
+    "nodemon": "^2.0.4",
     "webpack-cli": "^3.3.11"
   }
 }
