@@ -1,6 +1,9 @@
 import React from 'react';
 
-function NotFound() {
+function NotFound ({ staticContext = {} }) {
+  // staticContext doesn't exist on client, because we use BrowserRouter
+  staticContext && (staticContext.notFound = true);
+
   return (
     <div className="home">
       <h1> Page Not Found </h1>

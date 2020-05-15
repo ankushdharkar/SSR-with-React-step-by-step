@@ -21,7 +21,13 @@ app.get('*', (req, res) => {
   });
 
   Promise.all(allLoadPromises).then(() => {
-    res.send(generatedHTML(path, store));
+    const context = {};
+    const contentRendered = generatedHTML(path, store, context);
+
+    if (context.notFound) {
+      res.status(404);
+    }
+    res.send(contentRendered);
   });
 });
 

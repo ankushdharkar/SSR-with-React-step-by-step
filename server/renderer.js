@@ -7,10 +7,10 @@ import serialize from 'serialize-javascript';
 import Routes from "./../src/routes";
 
 
-function getContent(path, store) {
+function getContent(path, store, context) {
   const routeContent = (
     <Provider store={store}>
-      <StaticRouter location={path} context={{}}>
+      <StaticRouter location={path} context={context}>
         { renderRoutes(Routes) }
       </StaticRouter>
     </Provider>
@@ -27,8 +27,8 @@ function getScripts(store) {
   `;
 }
 
-function generatedHTML(path, store) {
-  const content = getContent(path, store);
+function generatedHTML(path, store, context) {
+  const content = getContent(path, store, context);
   const scripts = getScripts(store);
   return `
     <html>
