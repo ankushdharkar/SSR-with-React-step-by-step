@@ -15,8 +15,8 @@ function getContent(path) {
 }
 
 
-function generatedHTML() {
-  const content = getContent();
+function generatedHTML(path) {
+  const content = getContent(path);
   return `
     <html>
       <head></head>
