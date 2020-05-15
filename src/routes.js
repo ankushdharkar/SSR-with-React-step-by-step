@@ -1,6 +1,8 @@
 import App from './App';
 import HomePage from './pages/home';
 import AllConcertsPage from './pages/all-concerts';
+import NotFoundPage from './pages/not-found';
+
 
 export default [
   {
@@ -14,6 +16,9 @@ export default [
       {
         ...AllConcertsPage,
         path: '/all-concerts'
+      },
+      {
+        ...NotFoundPage
       }
     ]
   }
