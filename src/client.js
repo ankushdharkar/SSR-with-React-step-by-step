@@ -10,7 +10,8 @@ import { renderRoutes } from 'react-router-config';
 import Routes from './routes';
 import reducers from './reducers'
 
-const store = createStore(reducers, {}, applyMiddleware(thunk));
+const { INITIAL_STORE_STATE: initialStoreState = {} } = window;
+const store = createStore(reducers, initialStoreState, applyMiddleware(thunk));
 
 ReactDOM.hydrate(
   <Provider store={store}>

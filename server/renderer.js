@@ -18,16 +18,24 @@ function getContent(path, store) {
   return content;
 }
 
+function getScripts(store) {
+  const stateString = JSON.stringify(store.getState());
+  return `
+    <script>window.INITIAL_STORE_STATE = ${stateString}</script>
+    <script src="c-bundle.js"></script>
+  `;
+}
 
 function generatedHTML(path, store) {
   const content = getContent(path, store);
+  const scripts = getScripts(store);
   return `
     <html>
       <head></head>
       <body>
         <div id="root">
           ${content}
-          <script src="c-bundle.js"></script>
+          ${scripts}
         </div>      
       </body>
     </html>`
