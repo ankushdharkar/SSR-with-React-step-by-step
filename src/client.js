@@ -3,12 +3,21 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 // import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
 import Routes from './routes';
+import reducers from './reducers'
+
+const store = createStore(reducers, {}, applyMiddleware(thunk));
 
 ReactDOM.hydrate(
-  <BrowserRouter>
-    <Routes />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

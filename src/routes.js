@@ -6,7 +6,6 @@ export default () => {
   return (
     <Switch>
       <Route exact path="/" component={AppComponent} />
-      <Route path="/test" component={()=> 'Test Route Works'} />
     </Switch>
   )
 }

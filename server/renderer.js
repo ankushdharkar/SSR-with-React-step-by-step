@@ -1,22 +1,25 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import Routes from "./../src/routes";
 
 
-function getContent(path) {
+function getContent(path, store) {
   const routeContent = (
-    <StaticRouter location={path} context={{}}>
-      <Routes />
-    </StaticRouter>
+    <Provider store={store}>
+      <StaticRouter location={path} context={{}}>
+        <Routes />
+      </StaticRouter>
+    </Provider>
   )
   const content = renderToString(routeContent);
   return content;
 }
 
 
-function generatedHTML(path) {
-  const content = getContent(path);
+function generatedHTML(path, store) {
+  const content = getContent(path, store);
   return `
     <html>
       <head></head>

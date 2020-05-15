@@ -1,5 +1,6 @@
 import express from 'express';
 import { generatedHTML } from './renderer';
+import serverCreateStore from './store';
 
 const app = express();
 
@@ -7,7 +8,8 @@ app.use(express.static('public'));
 
 app.get('**', (req, res) => {
   const { path } = req;
-  res.send(generatedHTML(path));
+  const store = serverCreateStore();
+  res.send(generatedHTML(path, store));
 })
 
 
