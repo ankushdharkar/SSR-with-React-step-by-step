@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get('**', (req, res) => {
+app.get('*', (req, res) => {
   const { path } = req;
   const store = serverCreateStore();
   res.send(generatedHTML(path, store));

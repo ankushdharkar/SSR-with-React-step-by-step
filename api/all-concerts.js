@@ -1,5 +1,3 @@
-import { response } from "express"
-
 const allConcerts = [
   {
     id: 1001,

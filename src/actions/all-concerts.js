@@ -1,11 +1,11 @@
+import 'babel-polyfill';
 import getAllConcerts from "./../../api/all-concerts";
-import { FETCH_ALL_CONCERTS } from "../constants/action-types";
+import { FETCH_ALL_CONCERTS_TYPE } from "../constants/action-types";
 
-export const fetchAllConcerts = () => async dispatch => {
+export default () => async dispatch => {
   const res = await getAllConcerts();
-
   dispatch({
-    type: FETCH_ALL_CONCERTS,
+    type: FETCH_ALL_CONCERTS_TYPE,
     payload: res
   })
 }
