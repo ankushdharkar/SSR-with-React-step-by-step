@@ -1,9 +1,8 @@
-const express = require('express');
-const React = require('react');
-const renderToString = require('react-dom/server').renderToString;
+import express from 'express';
+import React from 'react';
+import { renderToString } from 'react-dom/server';
 
-const AppComponent = require('./../src/App').default;
-
+import AppComponent from './../src/App';
 
 const app = express();
 
