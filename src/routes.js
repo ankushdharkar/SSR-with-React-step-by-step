@@ -1,9 +1,8 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-
 import AppComponent from './App';
 import AllConcertsPage from './pages/all-concerts';
 
+/*
 export default () => {
   return (
     <Switch>
@@ -12,3 +11,16 @@ export default () => {
     </Switch>
   )
 }
+*/
+
+export default [
+  {
+    path: '/',
+    component: AppComponent,
+    exact: true
+  },
+  {
+    path: '/all-concerts',
+    component: AllConcertsPage
+  }
+];

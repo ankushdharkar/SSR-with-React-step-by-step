@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import './App.css';
 
 function App() {
@@ -9,6 +10,10 @@ function App() {
       <button onClick={() => console.log('Start finding events')}>
         Find Events
       </button>
+      <br />
+      <Link to="/all-concerts">
+        All Concerts
+      </Link>
 
     </div>
   );
