@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { renderRoutes } from 'react-router-config';
+import serialize from 'serialize-javascript';
 import Routes from "./../src/routes";
 
 
@@ -19,7 +20,7 @@ function getContent(path, store) {
 }
 
 function getScripts(store) {
-  const stateString = JSON.stringify(store.getState());
+  const stateString = serialize(store.getState());
   return `
     <script>window.INITIAL_STORE_STATE = ${stateString}</script>
     <script src="c-bundle.js"></script>
