@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       Concert Buddy is an app to help you find concerts
-
+      <br />
       <button onClick={() => console.log('Start finding events')}>
         Find Events
       </button>

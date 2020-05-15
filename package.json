@@ -18,7 +18,8 @@
     "eject": "react-scripts eject",
     "dev:build:server": "webpack --config config/webpack.server.js",
     "dev:build:server:watch": "webpack --config config/webpack.server.js --watch",
-    "dev:server": "nodemon --watch build --exec \"node build/s-bundle.js\""
+    "dev:server": "nodemon --watch build --exec \"node build/s-bundle.js\"",
+    "dev:build:client": "webpack --config config/webpack.client.js"
   },
   "eslintConfig": {
     "extends": "react-app"
