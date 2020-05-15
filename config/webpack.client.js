@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/index.js',
   output : {
     filename: 'c-bundle.js',
-    path: path.resolve(__dirname, '../build')  
+    path: path.resolve(__dirname, '../public')  
   },
   module: {
     rules: [
