@@ -8,8 +8,10 @@ function generatedHTML() {
     <html>
       <head></head>
       <body>
-        ${content}
-        <script src="c-bundle.js"></scrip>
+        <div id="root">
+          ${content}
+          <script src="c-bundle.js"></script>
+        </div>      
       </body>
     </html>`
 }
