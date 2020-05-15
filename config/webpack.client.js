@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/client.js',
   output : {
     filename: 'c-bundle.js',
     path: path.resolve(__dirname, '../public')  
