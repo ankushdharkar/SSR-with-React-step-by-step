@@ -1,22 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import './App.css';
+import { renderRoutes } from 'react-router-config';
 
-function App() {
+function App({ route }) {
   return (
     <div className="App">
-      Concert Buddy is an app to help you find concerts
       <br />
-      <button onClick={() => console.log('Start finding events')}>
-        Find Events
-      </button>
-      <br />
+
+      <Link to="/">
+        Home
+      </Link>
+      {'\t\t'}
       <Link to="/all-concerts">
         All Concerts
       </Link>
 
+      <br/>
+      <br/>
+  
+      { renderRoutes(route.routes) }
     </div>
   );
 }
 
-export default App;
+export default { component: App };

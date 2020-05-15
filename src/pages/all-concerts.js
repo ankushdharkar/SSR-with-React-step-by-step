@@ -10,14 +10,8 @@ class AllConcertsList extends Component {
 
   render() {
     const { allConcerts } = this.props;
-    
     return (
       <div>
-        <Link to="/">
-          Home
-        </Link>
-        <br />
-        <br />
         Concerts:
         <ul>
           { allConcerts && 
