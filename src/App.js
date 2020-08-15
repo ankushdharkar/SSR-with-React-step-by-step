@@ -1,12 +1,26 @@
 import React from 'react';
-import './App.css';
+import { Link } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 
-function App() {
+function App({ route }) {
   return (
     <div className="App">
-      App.js
+      <br />
+
+      <Link to="/">
+        Home
+      </Link>
+      {'\t\t'}
+      <Link to="/all-concerts">
+        All Concerts
+      </Link>
+
+      <br/>
+      <br/>
+  
+      { renderRoutes(route.routes) }
     </div>
   );
 }
 
-export default App;
+export default { component: App };

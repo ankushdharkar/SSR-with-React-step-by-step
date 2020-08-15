@@ -1,3 +1,8 @@
+# SSR
+
+Please check out the sequence on how to convert a basic React app into it's SSR Equivalent, by going through the commits of this PR one-by-one (Use 'n' and 'p' keyboard shortcuts to go next and to previous commit): https://github.com/ankushdharkar/SSR-with-React-step-by-step/pull/1
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
